@@ -1,7 +1,9 @@
-﻿Shader "Chimera/FluidCllor_Update"
+﻿Shader "Chimera/FluidColor_Update"
 {
     Properties
     {
+		_MainColor("Main Color", Color) = ( 1, 1, 1, 1 )
+		_DimColor("Dim Color", Color) = ( 0.1, 0.1, 0.1, 0.1 )
         _K("K", float) = 0.2
         _Viscosity("Viscosity", float) = 0.55
         _dt("dt", float) = 0.15
@@ -19,6 +21,7 @@
     float _dt;
 	float _Vorticity;   //Recommended values between 0.03 and 0.2, higher values simulate lower viscosity fluids (think billowing smoke)
 	float _VelocityAttenuation;
+	fixed4 _MainColor;
 
 	struct Emitter 
 	{
@@ -82,6 +85,9 @@
 		data.xy *= (1.0f - _VelocityAttenuation);
 
 		data = clamp(data, float4(float2(-10, -10), 0.5, -10.), float4(float2(10, 10), 3.0, 10.));
+
+		// Tinting
+		data *= _MainColor; 
 
 		return data;
 	}
