@@ -18,18 +18,18 @@ CustomRenderTexture:
   m_Height: 256
   m_AntiAliasing: 1
   m_MipCount: -1
-  m_DepthFormat: 2
+  m_DepthFormat: 0
   m_ColorFormat: 52
   m_MipMap: 0
   m_GenerateMips: 1
   m_SRGB: 0
   m_UseDynamicScale: 0
   m_BindMS: 0
-  m_EnableCompatibleFormat: 1
+  m_EnableCompatibleFormat: 0
   m_TextureSettings:
     serializedVersion: 2
     m_FilterMode: 1
-    m_Aniso: 0
+    m_Aniso: 1
     m_MipBias: 0
     m_WrapU: 2
     m_WrapV: 2
@@ -39,7 +39,7 @@ CustomRenderTexture:
   m_Material: {fileID: 2100000, guid: 4fc146f36dfd375489d07a750a24b2a2, type: 2}
   m_InitSource: 0
   m_InitMaterial: {fileID: 0}
-  m_InitColor: {r: 1, g: 1, b: 1, a: 1}
+  m_InitColor: {r: 0, g: 0, b: 0, a: 1}
   m_InitTexture: {fileID: 0}
   m_UpdateMode: 2
   m_InitializationMode: 2

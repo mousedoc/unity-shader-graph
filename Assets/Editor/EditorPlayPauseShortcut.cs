@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Diagnostics.CodeAnalysis;
+using UnityEditor;
 
-public class EditorPlayPauseShortcut : MonoBehaviour
+public class EditorPlayPauseShortcut
 {
-    // Start is called before the first frame update
-    void Start()
+#if UNITY_EDITOR_WIN
+
+    [MenuItem("Tools/Editor/Play %q", priority = 10)]
+    [SuppressMessage("CodeQuality", "IDE0051:사용되지 않는 private 멤버 제거", Justification = "Called by Unity editor")]
+    private static void SetPlay()
     {
-        
+        EditorApplication.isPlaying = !EditorApplication.isPlaying;
     }
 
-    // Update is called once per frame
-    void Update()
+    [MenuItem("Tools/Editor/Pause %e", priority = 11)]
+    [SuppressMessage("CodeQuality", "IDE0051:사용되지 않는 private 멤버 제거", Justification = "Called by Unity editor")]
+    private static void SetPause()
     {
-        
+        EditorApplication.isPaused = !EditorApplication.isPaused;
     }
+
+#endif
 }
+
