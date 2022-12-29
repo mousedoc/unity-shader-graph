@@ -1,8 +1,7 @@
 # unity-shader-graph
-Unity Shadergraph
+Unity URP playground 
 
-
-## Screen space decal
+## Screen Space Decal
 > Ref : https://github.com/ColinLeung-NiloCat/UnityURPUnlitScreenSpaceDecalShader  
 
 ![](./ReadmeAssets/SampleScreenSpaceDecal.png)
