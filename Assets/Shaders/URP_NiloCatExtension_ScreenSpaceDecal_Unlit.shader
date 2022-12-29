@@ -1,4 +1,4 @@
-// see README here: 
+﻿// see README here: 
 // github.com/ColinLeung-NiloCat/UnityURPUnlitScreenSpaceDecalShader
 
 Shader "Universal Render Pipeline/NiloCat Extension/Screen Space Decal/Unlit"
@@ -19,6 +19,7 @@ Shader "Universal Render Pipeline/NiloCat Extension/Screen Space Decal/Unlit"
 
         [Header(Prevent Side Stretching(Compare projection direction with scene normal and Discard if needed))]
         [Toggle(_ProjectionAngleDiscardEnable)] _ProjectionAngleDiscardEnable("_ProjectionAngleDiscardEnable (default = off)", float) = 0
+        //_ProjectionAngleDiscardThreshold("_ProjectionAngleDiscardThreshold (default = 0)", Float) = 0
         _ProjectionAngleDiscardThreshold("_ProjectionAngleDiscardThreshold (default = 0)", range(-1,1)) = 0
 
         [Header(Mul alpha to rgb)]
